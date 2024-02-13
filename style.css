@@ -1,0 +1,64 @@
+body, html {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    scrollbar-color: #333 #ffffff;
+    scrollbar-width: none; /* Firefox */
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 8fr 2fr; /* Divide into three columns (8:1:1) */
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "one two"
+      "one four"
+      "one four"
+      "one four";
+}
+
+.sacrifice {
+    grid-area: one;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.elephant > img {
+    width: 3%;
+}
+
+.horse > img {
+    width: 1.5%;
+}
+
+.chariot > img {
+    width: 4%;
+}
+
+.title {
+    grid-area: two;
+    padding: 10px;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.explanation {
+    font-size: medium;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.vessentara {
+    grid-area: four;
+    display: flex;
+    padding: 10px;
+}
+
+.vessentara > img {
+    width: 3%;
+    align-self: flex-start;
+    justify-self: center;
+}
