@@ -19,22 +19,50 @@ body, html {
       "one four";
 }
 
+.sacrifice::-webkit-scrollbar {
+    display: none;
+}
+
 .sacrifice {
     grid-area: one;
     padding: 10px;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
-.elephant > img {
+.jewellery,
+.coins,
+.coins2 {
+    width: 0.8%;
+}
+
+.elephant {
     width: 3%;
 }
 
-.horse > img {
+.horse {
     width: 1.5%;
 }
 
-.chariot > img {
+.chariot {
     width: 4%;
+}
+
+.cow {
+    width: 2%;
+}
+
+.female-slave,
+.male-slave {
+    width: 1%;
+}
+
+.woman {
+    width: 0.6%;
+}
+
+.children {
+    width: 1.5%;
 }
 
 .title {
@@ -54,11 +82,17 @@ body, html {
 .vessentara {
     grid-area: four;
     display: flex;
+    flex-direction: column;
     padding: 10px;
 }
 
 .vessentara > img {
     width: 3%;
     align-self: flex-start;
-    justify-self: center;
+}
+
+.quote {
+    width: 100%;
+    margin-top: 30px;
+    align-self: flex-end;
 }
