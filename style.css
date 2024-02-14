@@ -93,6 +93,7 @@ body, html {
 }
 
 .children {
+    margin-left: 10px;
     width: 16px;
 }
 
