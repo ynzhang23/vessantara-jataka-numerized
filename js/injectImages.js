@@ -2,6 +2,7 @@
 var elephantImagePath = 'img/elephant.png';
 var horseImagePath = 'img/horse.jpg';
 var chariotImagePath = 'img/chariot.jpeg';
+var chariot2ImagePath = 'img/chariot2.png';
 var cowImagePath = 'img/cow.jpg';
 var femaleSlaveImagePath = 'img/female_slave.png';
 var maleSlaveImagePath = 'img/male_slave.png';
@@ -9,6 +10,8 @@ var womanImagePath = 'img/woman.png';
 var childrenImagePath = 'img/children.png';
 var jewelleryImagePath = 'img/jewellery.png';
 var coinsImagePath = 'img/coins.png';
+var elephant2ImagePath = 'img/elephant2.png';
+var wifeImagePath = 'img/wife.jpg'
 
 // Get the container where elephants, horses, and chariots will be injected
 var container = document.querySelector('.sacrifice');
@@ -63,12 +66,20 @@ for (var i = 0; i < 10; i++) {
 }
 
 // Loop to inject coins
-for (var i = 0; i < 4170; i++) {
+for (var i = 0; i < 4270; i++) {
     var coinsImg = document.createElement('img');
     coinsImg.classList.add('coins2');
     coinsImg.src = coinsImagePath;
     container.appendChild(coinsImg);
 }
+
+// Create the children image element
+var elephant2Img = document.createElement('img');
+elephant2Img.classList.add('elephant2');
+elephant2Img.src = elephant2ImagePath;
+
+// Append the children image to the container
+container.appendChild(elephant2Img);
 
 // Loop to inject elephants
 for (var i = 0; i < 700; i++) {
@@ -126,6 +137,30 @@ for (var i = 0; i < 700; i++) {
     container.appendChild(womanImg);
 }
 
+// Loop to inject jewellery
+for (var i = 0; i < 19; i++) {
+    var jewelleryImg = document.createElement('img');
+    jewelleryImg.classList.add('jewellery2');
+    jewelleryImg.src = jewelleryImagePath;
+    container.appendChild(jewelleryImg);
+}
+
+// Loop to inject horses
+for (var i = 0; i < 4; i++) {
+    var horseImg = document.createElement('img');
+    horseImg.classList.add('horse2');
+    horseImg.src = horseImagePath;
+    container.appendChild(horseImg);
+}
+
+// Create the children image element
+var chariot2Img = document.createElement('img');
+chariot2Img.classList.add('chariot2');
+chariot2Img.src = chariot2ImagePath;
+
+// Append the children image to the container
+container.appendChild(chariot2Img);
+
 // Create the children image element
 var childrenImg = document.createElement('img');
 childrenImg.classList.add('children');
@@ -134,5 +169,13 @@ childrenImg.src = childrenImagePath;
 // Append the children image to the container
 container.appendChild(childrenImg);
 
+// Create the children image element
+var wifeImg = document.createElement('img');
+wifeImg.classList.add('wife');
+wifeImg.src = wifeImagePath;
+
+// Append the children image to the container
+container.appendChild(wifeImg);
+
 // Apply auto-scroll to the container
-autoScroll(container, 30); // Adjust scroll speed (milliseconds)
+autoScroll(container, 20); // Adjust scroll speed (milliseconds)

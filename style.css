@@ -10,7 +10,7 @@ body, html {
 .grid {
     display: grid;
     height: 100%;
-    grid-template-columns: 8fr 2fr; /* Divide into three columns (8:1:1) */
+    grid-template-columns: 10fr 2fr; /* Divide into three columns (8:1:1) */
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
       "one two"
@@ -30,47 +30,83 @@ body, html {
     scrollbar-width: none;
 }
 
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.return-to-top-button {
+    display: inline-block;
+    color: #007bff; /* Button text color */
+    text-decoration: underline; /* Underline the button text */
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+}
+
+.return-to-top-button:hover {
+    color: #ff1493; /* Change text color on hover to a Y2K-inspired color */
+}
+
 .jewellery,
+.jewellery2,
 .coins,
 .coins2 {
-    width: 0.8%;
+    width: 10px;
+}
+
+.elephant2 {
+    width: 50px;
 }
 
 .elephant {
-    width: 3%;
+    width: 45px;
 }
 
-.horse {
-    width: 1.5%;
+.horse,
+.horse2 {
+    width: 25px;
 }
 
 .chariot {
-    width: 4%;
+    width: 65px;
+}
+
+.chariot2 {
+    width: 45px;
 }
 
 .cow {
-    width: 2%;
+    width: 30px;
 }
 
 .female-slave,
 .male-slave {
-    width: 1%;
+    width: 15px;
 }
 
 .woman {
-    width: 0.6%;
+    width: 10px;
 }
 
 .children {
-    width: 1.5%;
+    width: 16px;
+}
+
+.wife {
+    width: 23px;
 }
 
 .title {
     grid-area: two;
     padding: 10px;
     font-style: italic;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .explanation {
@@ -86,13 +122,17 @@ body, html {
     padding: 10px;
 }
 
-.vessentara > img {
-    width: 3%;
+.vessentara_img {
+    width: 10px;
     align-self: flex-start;
+}
+
+.name {
+    font-size: small;
 }
 
 .quote {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 30%;
     align-self: flex-end;
 }
