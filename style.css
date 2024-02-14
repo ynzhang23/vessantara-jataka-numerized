@@ -3,8 +3,6 @@ body, html {
     padding: 0px;
     margin: 0px;
     height: 100%;
-    scrollbar-color: #333 #ffffff;
-    scrollbar-width: none; /* Firefox */
 }
 
 .grid {
@@ -17,10 +15,6 @@ body, html {
       "one four"
       "one four"
       "one four";
-}
-
-.sacrifice::-webkit-scrollbar {
-    display: none;
 }
 
 .sacrifice {
@@ -103,25 +97,29 @@ body, html {
 
 .title {
     grid-area: two;
-    padding: 10px;
     font-style: italic;
     font-size: xx-large;
     font-weight: bold;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.vessentara,
+.title {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .explanation {
     font-size: small;
     font-weight: normal;
     font-style: normal;
-    color: grey;
+    color: darkblue;
 }
 
 .vessentara {
     grid-area: four;
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
 .vessentara_img {
@@ -136,7 +134,7 @@ body, html {
 .name {
     font-size: small;
     margin-left: 10px;
-    color: #007bff;
+    color: #149564;
 }
 
 .quote {

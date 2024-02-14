@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var images = document.querySelectorAll('.sacrifice img');
   var quoteDiv = document.querySelector('.quote');
+  var container = document.querySelector('.sacrifice');
 
   var quotes = {
     'coins': `<em>"Even as he was being born he stretched out his hand
@@ -126,6 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var imageClass = this.classList[0]; // Assuming the class is the identifier
         displayQuote(imageClass);
     });
+  });
+
+  // Add event listener to the container to clear the quote when mouse leaves it
+  container.addEventListener('mouseout', function() {
+    quoteDiv.innerHTML = '';
   });
 
   function displayQuote(imageClass) {
