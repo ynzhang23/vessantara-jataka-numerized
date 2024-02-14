@@ -115,6 +115,7 @@ body, html {
     grid-area: four;
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .vessentara_img {
