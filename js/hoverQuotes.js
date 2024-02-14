@@ -41,21 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
     hundred elephants</span>, seven hundred horses, seven hundred chariots, seven
     hundred women, seven hundred cows, seven hundred female slaves,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'horse': `<em>"Tomorrow I am going to give a donation of the seven hundreds— seven
     hundred elephants, <span style="background-color: yellow;">seven hundred horses</span>, seven hundred chariots, 
     seven hundred women, seven hundred cows, seven hundred female slaves,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'horse2': `<em>"Brahmins followed him, and they asked him for his horses. Asked by them, he 
     gave the <span style="background-color: yellow;">four horses</span> to them."</em>`,
@@ -64,11 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     hundred elephants, seven hundred horses, <span style="background-color: yellow;">seven hundred chariots</span>, 
     seven hundred women, seven hundred cows, seven hundred female slaves,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'chariot2': `<em>"And then a fifth came there, and asked for <span style="background-color: yellow;">this carriage</span>.
     Asked by him, he gave it, and his mind was not at all perturbed. Then King Vessantara lifted down his own, And 
@@ -78,41 +66,25 @@ document.addEventListener("DOMContentLoaded", function() {
     hundred elephants, seven hundred horses, seven hundred chariots, 
     seven hundred women, <span style="background-color: yellow;">seven hundred cows</span>, seven hundred female slaves,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'female-slave': `<em>"Tomorrow I am going to give a donation of the seven hundreds— seven
     hundred elephants, seven hundred horses, seven hundred chariots, 
     seven hundred women, seven hundred cows, <span style="background-color: yellow;">seven hundred female slaves</span>,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'male-slave': `<em>"Tomorrow I am going to give a donation of the seven hundreds— seven
     hundred elephants, seven hundred horses, seven hundred chariots, 
     seven hundred women, seven hundred cows, seven hundred female slaves,
     <span style="background-color: yellow;">seven hundred male slaves</span>—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'woman': `<em>"Tomorrow I am going to give a donation of the seven hundreds— seven
     hundred elephants, seven hundred horses, seven hundred chariots, 
     <span style="background-color: yellow;">seven hundred women</span>, seven hundred cows, seven hundred female slaves,
     seven hundred male slaves—and supply various kinds of food and drink
-    and suchlike, including even spirits. Please make the arrangements, of all
-    things of a quality suitable to be given. So, having considered carefully
-    the seven hundredfold gift, he dismissed his ministers and alone went to
-    Maddi’s living quarters, and sitting on the royal couch, he started to have
-    discussions with her."</em>`,
+    and suchlike, including even spirits."</em>`,
 
     'children':`<em>"‘Omniscience is a hundred times a thousand times, a hundred thousand times more dear to me than my child.’ 
     And the great earth resounded, as he gave to the brahmin <span style="background-color: yellow;">the gift of his children</span>."</em>`,
@@ -129,10 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Add event listener to the container to clear the quote when mouse leaves it
-  container.addEventListener('mouseout', function() {
-    quoteDiv.innerHTML = '';
-  });
 
   function displayQuote(imageClass) {
     var quote = quotes[imageClass];

@@ -1,5 +1,5 @@
 body, html {
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Courier New', Courier, monospace;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -20,22 +20,18 @@ body, html {
 .sacrifice {
     grid-area: one;
     padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     overflow-y: auto;
     scrollbar-width: none;
 }
 
-.return-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-}
-
 .return-to-top-button {
     display: inline-block;
+    margin-top: 20px;
+    font-size: small;
     color: #007bff; /* Button text color */
     text-decoration: underline; /* Underline the button text */
-    padding: 10px 20px;
     border: none; /* Remove border */
     background-color: transparent; /* Transparent background */
     cursor: pointer;
@@ -97,7 +93,6 @@ body, html {
 
 .title {
     grid-area: two;
-    font-style: italic;
     font-size: xx-large;
     font-weight: bold;
     padding-bottom: 30px;

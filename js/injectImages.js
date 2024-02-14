@@ -42,9 +42,6 @@ function autoScroll(element, scrollSpeed) {
     // Start scrolling
     startScrolling();
 
-    // Stop scrolling when mouse hovers over the container
-    element.addEventListener('mouseenter', stopScrolling);
-
     // Resume scrolling when mouse leaves the container
     element.addEventListener('mouseleave', startScrolling);
 }
@@ -178,4 +175,4 @@ wifeImg.src = wifeImagePath;
 container.appendChild(wifeImg);
 
 // Apply auto-scroll to the container
-autoScroll(container, 20); // Adjust scroll speed (milliseconds)
+autoScroll(container, 40); // Adjust scroll speed (milliseconds)
