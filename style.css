@@ -111,9 +111,10 @@ body, html {
 }
 
 .explanation {
-    font-size: medium;
+    font-size: small;
     font-weight: normal;
     font-style: normal;
+    color: grey;
 }
 
 .vessentara {
@@ -128,8 +129,14 @@ body, html {
     align-self: flex-start;
 }
 
+.vessentara > div {
+    display: flex;
+}
+
 .name {
     font-size: small;
+    margin-left: 10px;
+    color: #007bff;
 }
 
 .quote {
