@@ -29,7 +29,8 @@ body, html {
 .return-to-top-button {
     display: inline-block;
     margin-top: 20px;
-    font-size: small;
+    margin-bottom: 10px;
+    font-size: 1.5vh;
     color: #007bff; /* Button text color */
     text-decoration: underline; /* Underline the button text */
     border: none; /* Remove border */
@@ -93,19 +94,19 @@ body, html {
 
 .title {
     grid-area: two;
-    font-size: xx-large;
+    font-size: 2.5vh; /* Adjust the value as needed */
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 1vw; /* Adjust the value as needed */
 }
 
 .vessentara,
 .title {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 2vw; /* Adjust the value as needed */
+    padding-right: 2vw; /* Adjust the value as needed */
 }
 
 .explanation {
-    font-size: small;
+    font-size: 0.8vw; /* Adjust the value as needed */
     font-weight: normal;
     font-style: normal;
     color: darkblue;
@@ -115,26 +116,25 @@ body, html {
     grid-area: four;
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
+    padding-bottom: 1vw; /* Adjust the value as needed */
 }
 
 .vessentara_img {
-    width: 10px;
-    align-self: flex-start;
+    width: 10px; /* Adjust the value as needed */
 }
 
 .vessentara > div {
     display: flex;
+    align-items: center;
 }
 
 .name {
-    font-size: small;
-    margin-left: 10px;
+    font-size: 1.5vh; /* Adjust the value as needed */
+    margin-left: 1vw; /* Adjust the value as needed */
     color: #149564;
 }
 
 .quote {
-    width: 100%;
-    margin-top: 30%;
-    align-self: flex-end;
+    margin-top: 1vh;
+    font-size: 1.8vh; /* Adjust the value as needed */
 }
