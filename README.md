@@ -1,4 +1,4 @@
-# Vessantara Jataka
+# Vessantara Jataka Numerated
 
 This is an analytical visualization of Vessantara's altruism and his grand attempt at complete detachment. The data originates from the narrative of Vessantara Jataka, presented here to highlight the significance of his path to awakening and its cost on a grand utilitarian scale.
 
