@@ -1,5 +1,5 @@
 body, html {
-    font-family:'Courier New', Courier, monospace;
+    font-family: "PT Serif", serif;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -136,5 +136,5 @@ body, html {
 
 .quote {
     margin-top: 1vh;
-    font-size: 1.8vh; /* Adjust the value as needed */
+    font-size: 1.3vh; /* Adjust the value as needed */
 }
