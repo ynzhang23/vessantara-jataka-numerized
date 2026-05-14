@@ -42,7 +42,8 @@ function autoScroll(element, scrollSpeed) {
     // Start scrolling
     startScrolling();
 
-    // Resume scrolling when mouse leaves the container
+    // Pause on hover so the reader can dwell on a passage
+    element.addEventListener('mouseenter', stopScrolling);
     element.addEventListener('mouseleave', startScrolling);
 }
 

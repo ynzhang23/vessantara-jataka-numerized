@@ -1,140 +1,192 @@
-body, html {
-    font-family: "PT Serif", serif;
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
+:root {
+  --bg:    #ffffff;
+  --ink:   #000000;
+  --muted: #6b6b6b;
+
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-sans:  'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:  'Roboto Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- layout ---------- */
 .grid {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 10fr 2fr; /* Divide into three columns (8:1:1) */
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-      "one two"
-      "one four"
-      "one four"
-      "one four";
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 360px);
 }
 
+/* ---------- left: the wall of giving ---------- */
 .sacrifice {
-    grid-area: one;
-    padding: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow-y: auto;
-    scrollbar-width: none;
+  position: relative;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 3rem 1.5rem;
+  border-right: 1px solid var(--ink);
+}
+.sacrifice::-webkit-scrollbar { display: none; }
+
+.sacrifice img {
+  filter: grayscale(1) contrast(1.05);
+  vertical-align: middle;
 }
 
-.return-to-top-button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 1.5vh;
-    color: #007bff; /* Button text color */
-    text-decoration: underline; /* Underline the button text */
-    border: none; /* Remove border */
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;
+/* preserved icon sizes — these encode the visual rhythm */
+.jewellery, .jewellery2, .coins, .coins2 { width: 10px; }
+.elephant2 { width: 50px; }
+.elephant  { width: 45px; }
+.horse, .horse2 { width: 25px; }
+.chariot   { width: 65px; }
+.chariot2  { width: 45px; }
+.cow       { width: 30px; }
+.female-slave, .male-slave { width: 15px; }
+.woman     { width: 10px; }
+.children  { margin-left: 10px; width: 16px; }
+.wife      { width: 23px; }
+
+/* ---------- right: the reading rail ---------- */
+.rail {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2.5rem 1.75rem;
+  gap: 1.5rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
-.return-to-top-button:hover {
-    color: #ff1493; /* Change text color on hover to a Y2K-inspired color */
+/* head */
+.rail__head h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  margin: 0 0 0.85rem;
+}
+.rail__head h1 em { font-style: italic; }
+
+.rail__lede {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.rail__lede .cf {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 
-.jewellery,
-.jewellery2,
-.coins,
-.coins2 {
-    width: 10px;
+/* scale referent */
+.rail__scale {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ink);
+}
+.scale-mark {
+  width: 10px;
+  height: auto;
+  filter: grayscale(1) contrast(1.05);
+  flex-shrink: 0;
+}
+.scale-caption {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+.scale-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+.scale-note {
+  font-style: italic;
+  color: var(--muted);
 }
 
-.elephant2 {
-    width: 50px;
+/* quote */
+.rail__quote {
+  flex: 1;
+  min-height: 9rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ink);
 }
-
-.elephant {
-    width: 45px;
+.quote-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
 }
-
-.horse,
-.horse2 {
-    width: 25px;
-}
-
-.chariot {
-    width: 65px;
-}
-
-.chariot2 {
-    width: 45px;
-}
-
-.cow {
-    width: 30px;
-}
-
-.female-slave,
-.male-slave {
-    width: 15px;
-}
-
-.woman {
-    width: 10px;
-}
-
-.children {
-    margin-left: 10px;
-    width: 16px;
-}
-
-.wife {
-    width: 23px;
-}
-
-.title {
-    grid-area: two;
-    font-size: 2.5vh; /* Adjust the value as needed */
-    font-weight: bold;
-    padding-bottom: 1vw; /* Adjust the value as needed */
-}
-
-.vessentara,
-.title {
-    padding-left: 2vw; /* Adjust the value as needed */
-    padding-right: 2vw; /* Adjust the value as needed */
-}
-
-.explanation {
-    font-size: 0.8vw; /* Adjust the value as needed */
-    font-weight: normal;
-    font-style: normal;
-    color: darkblue;
-}
-
-.vessentara {
-    grid-area: four;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1vw; /* Adjust the value as needed */
-}
-
-.vessentara_img {
-    width: 10px; /* Adjust the value as needed */
-}
-
-.vessentara > div {
-    display: flex;
-    align-items: center;
-}
-
-.name {
-    font-size: 1.5vh; /* Adjust the value as needed */
-    margin-left: 1vw; /* Adjust the value as needed */
-    color: #149564;
-}
-
 .quote {
-    margin-top: 1vh;
-    font-size: 1.3vh; /* Adjust the value as needed */
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.quote em { font-style: italic; }
+.quote p { margin: 0 0 0.5rem; }
+/* override the inline yellow highlight from hoverQuotes.js — keep emphasis, drop color */
+.quote span[style*="yellow"] {
+  background-color: transparent !important;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* foot */
+.rail__foot {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ink);
+}
+.return-to-top-button {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: none;
+  color: var(--ink);
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.return-to-top-button:hover {
+  text-decoration: none;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px) {
+  html, body { height: auto; overflow: auto; }
+  .grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .sacrifice {
+    height: 60vh;
+    border-right: none;
+    border-bottom: 1px solid var(--ink);
+    padding: 2rem 1.25rem;
+  }
+  .rail {
+    height: auto;
+    padding: 1.75rem 1.5rem 2.5rem;
+  }
+  .rail__quote { min-height: 6rem; }
 }

@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vessantara Jataka Numerated</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vessantara Jataka, Numerated</title>
+  <meta name="description" content="An analytical visualization of Vessantara's giving, drawn from the Pali Jataka narrative at 1:300 scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="grid">
-        <div class="sacrifice">
+  <main class="grid">
+    <section class="sacrifice" aria-label="Visualization of Vessantara's gifts, drawn at 1:300 scale"></section>
+
+    <aside class="rail">
+      <header class="rail__head">
+        <h1>Vessantara Jataka,<br><em>Numerated</em></h1>
+        <p class="rail__lede">
+          An analytical visualization of Vessantara&rsquo;s altruism and his grand
+          attempt at material detachment. The data originates from the narrative
+          of the Vessantara Jataka, presented here to highlight the significance
+          of his path to awakening and its cost on a grand
+          utilitarian&thinsp;<span class="cf">(?)</span> scale.
+        </p>
+      </header>
+
+      <section class="rail__scale" aria-label="Scale reference">
+        <img src="img/buddha-silhouette.jpeg" alt="" class="scale-mark">
+        <p class="scale-caption">
+          <span class="scale-mono">SCALE&nbsp;1:300</span><br>
+          <span class="scale-note">one human, drawn to size</span>
+        </p>
+      </section>
+
+      <section class="rail__quote" aria-live="polite" aria-label="Passage from the Jataka">
+        <div class="quote">
+          <p class="quote-prompt">Hover an image &mdash;<br>the verse it stands for will appear here.</p>
         </div>
-        <div class="title">
-            <p>Vessantara Jataka Numerated</p>
-            <div class="explanation">
-                This is an analytical visualization of Vessantara's altruism and 
-                his grand attempt at material detachment. The data originates from the narrative of Vessantara Jataka, 
-                presented here to highlight the significance
-                of his path to awakening and its cost on a grand utilitarian(?) scale.      
-            </div>
-        </div>
-        <div class="vessentara">
-            <div>
-                <img class="vessentara_img" src="img/buddha-silhouette.jpeg" alt="">
-                <div class="name">Scale: 1:300</div>
-            </div>
-            <div class="return-to-top">
-                <a href="#" class="return-to-top-button">Return to Top</a>
-            </div>
-            <div class="quote"></div>
-        </div>
-    </div>
-    <script src="js/injectImages.js"></script>
-    <script src="js/hoverQuotes.js"></script>
-    <script src="js/scrollToTop.js"></script>
+      </section>
+
+      <footer class="rail__foot">
+        <button type="button" class="return-to-top-button">&uarr;&nbsp;&nbsp;return to top</button>
+      </footer>
+    </aside>
+  </main>
+
+  <script src="js/injectImages.js"></script>
+  <script src="js/hoverQuotes.js"></script>
+  <script src="js/scrollToTop.js"></script>
 </body>
 </html>
